@@ -18,6 +18,7 @@ repositories {
         name = 'Fabric'
         url = 'https://maven.fabricmc.net/'
     }
+    maven { url 'https://jitpack.io' }
 }
 
 // We use shadow here to avoid the following dependencies being shadowed.
@@ -41,6 +42,9 @@ dependencies {
 
     shadow "org.slf4j:slf4j-api:1.8.0-beta4"
     shadow 'org.apache.logging.log4j:log4j-slf4j18-impl:2.17.2'
+
+    implementation("com.github.LlamaLad7:MixinExtras:0.0.11")
+    annotationProcessor("com.github.LlamaLad7:MixinExtras:0.0.11")
 }
 
 java {

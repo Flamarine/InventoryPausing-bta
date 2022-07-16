@@ -1,34 +1,27 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "invpausing",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Inventory Pausing",
+  "description": "Pause the game when displaying player inventory, for Better than Adventure",
   "authors": [
-    "Me!"
+    "pkstDev"
   ],
-  "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
-  },
 
   "license": "CC0-1.0",
 
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
-    "main": [
-      "com.example.examplemod.ExampleMod"
+    "preLaunch": [
+      "io.github.pkstdev.invpausing.InventoryPausingPreLaunch"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "invpausing.mixins.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.13.3"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }
